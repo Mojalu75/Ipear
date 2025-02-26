@@ -1,0 +1,55 @@
+body {
+    font-family: 'Open Sans';
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.infoa{
+    background-color: #060911;
+    padding: 10px;
+    border-radius: 20px;
+}
+button{
+    background-color: #384057;
+    border-color: #a9befa;
+    color: white;
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 25px;
+}
+
+
+
+
+--
+/* Contenedor del carrusel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imágenes del carrusel */
+.carousel img {
+    position: absolute;
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Animación de cambio de imágenes */
+@keyframes fade {
+    0% { opacity: 1; }  /* Imagen visible */
+    25% { opacity: 1; } /* Mantiene la imagen visible */
+    30% { opacity: 0; } /* Empieza a desvanecerse */
+    100% { opacity: 0; } /* Imagen oculta */
+}
+
+/* Aplicar la animación a cada imagen */
+.carousel img:nth-child(1) { animation: fade 12s infinite 0s; }
+.carousel img:nth-child(2) { animation: fade 12s infinite 3s; }
+.carousel img:nth-child(3) { animation: fade 12s infinite 6s; }
+.carousel img:nth-child(4) { animation: fade 12s infinite 9s; }
